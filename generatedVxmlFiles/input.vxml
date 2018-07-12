@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml application="globalContext.vxml" version="2.1" xmlns="http://www.w3.org/2001/vxml" xmlns:gmap="http://www.example.org/gmap" xmlns:java="com.hp.ocstudio.gmap.diagram.codegeneration.XSLSupportFunctions" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd">
+    <var expr="" name="input"/>
+    <var expr="" name="tmp"/>
+    <form id="Input">
+        <field name="Input" slot="8" type="digits">
+            <prompt>
+                <audio expr="getPath(getAudio(subscriber), subscriber)"/>
+            </prompt>
+            <catch count="3" event="noinput">
+                <reprompt/>
+            </catch>
+            <catch count="3" event="nomatch">
+                <reprompt/>
+            </catch>
+            <filled>
+                <assign expr="Input" name="input"/>
+                <assign expr="getComponentParameteres(subscriber, input)" name="tmp"/>
+                <log label="input">input                        : <value expr="[subscriber.state.previous.name,subscriber.session.origin,subscriber.session.caller]"/></log>
+                <goto expr="handleState(subscriber)"/>
+            </filled>
+        </field>
+    </form>
+</vxml>

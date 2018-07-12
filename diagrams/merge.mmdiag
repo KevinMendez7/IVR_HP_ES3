@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gmap="http://www.example.org/gmap" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <gmap:VxmlType xmi:id="_MgMgIG4eEei2ep13hjBVQg" version="1.13">
+    <globalEventHandler xmi:type="gmap:GlobalEventHandlerType" xmi:id="_MgNHMW4eEei2ep13hjBVQg"/>
+    <target xmi:type="gmap:TargetType" xmi:id="_MgNHMG4eEei2ep13hjBVQg">
+      <stdTransitionTargetSetVariable xmi:type="gmap:StandardTransitionTargetSetVariableType" xmi:id="_1SUO0G4eEei2ep13hjBVQg" source="_MgNHMG4eEei2ep13hjBVQg" targetElement="_uFzk0G4eEei2ep13hjBVQg"/>
+    </target>
+    <variable xmi:type="gmap:VariableType" xmi:id="_MgNHMm4eEei2ep13hjBVQg">
+      <var xmi:type="gmap:VarType" xmi:id="_tl1rUG4eEei2ep13hjBVQg" name="reuse" value=""/>
+    </variable>
+    <setVariable xmi:type="gmap:SetType" xmi:id="_uFzk0G4eEei2ep13hjBVQg" id="merge" label="merge">
+      <var xmi:type="gmap:VarType" xmi:id="_6Df_0IA7EeiPAP7P5dBK8g" name="reuse" value="getFunction(subscriber)"/>
+      <stdTransitionSetVariableLog xmi:type="gmap:StandardTransitionSetVariableLogType" xmi:id="_-568MIA7EeiPAP7P5dBK8g" source="_uFzk0G4eEei2ep13hjBVQg" targetElement="_60szQIA7EeiPAP7P5dBK8g"/>
+    </setVariable>
+    <log xmi:type="gmap:LogType" xmi:id="_60szQIA7EeiPAP7P5dBK8g" desc="Log" id="Log_1" label="log" logtext="log            : " sourceExpr="[subscriber.report.route, subscriber.report.routeTime, subscriber.report.start]">
+      <stdTransitionLogExternalGoto xmi:type="gmap:StandardTransitionLogExternalGotoType" xmi:id="__Rg80IA7EeiPAP7P5dBK8g" source="_60szQIA7EeiPAP7P5dBK8g" targetElement="_gs3YUG4fEei2ep13hjBVQg"/>
+    </log>
+    <externalGoto xmi:type="gmap:ExternalGotoType" xmi:id="_gs3YUG4fEei2ep13hjBVQg" expr="handleState(subscriber)" fetchhint="" id="ExternalGoto_1" label="ExternalGoto" method="GET" type="goto"/>
+  </gmap:VxmlType>
+  <notation:Diagram xmi:id="_MgNHM24eEei2ep13hjBVQg" type="Gmap" element="_MgMgIG4eEei2ep13hjBVQg" name="merge.mmdiag" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_MgNHNG4eEei2ep13hjBVQg" type="1003" element="_MgNHMG4eEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MgNHNW4eEei2ep13hjBVQg" x="130" y="10"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_MgNHNm4eEei2ep13hjBVQg" type="1015" element="_MgNHMW4eEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MgNHN24eEei2ep13hjBVQg" x="270" y="10"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_MgNHOG4eEei2ep13hjBVQg" type="1001" element="_MgNHMm4eEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MgNHOW4eEei2ep13hjBVQg"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_uF0y8G4eEei2ep13hjBVQg" type="1006" element="_uFzk0G4eEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uF0y8W4eEei2ep13hjBVQg" x="130" y="95"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_gs4mcG4fEei2ep13hjBVQg" type="1008" element="_gs3YUG4fEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gs4mcW4fEei2ep13hjBVQg" x="125" y="195"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_60zg8IA7EeiPAP7P5dBK8g" type="1017" element="_60szQIA7EeiPAP7P5dBK8g" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_60zg8YA7EeiPAP7P5dBK8g" x="327" y="157"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_MgNHOm4eEei2ep13hjBVQg"/>
+    <edges xmi:type="notation:Connector" xmi:id="_1SVc8G4eEei2ep13hjBVQg" type="3263" element="_1SUO0G4eEei2ep13hjBVQg" source="_MgNHNG4eEei2ep13hjBVQg" target="_uF0y8G4eEei2ep13hjBVQg">
+      <styles xmi:type="notation:FontStyle" xmi:id="_1SVc8W4eEei2ep13hjBVQg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1SVc8m4eEei2ep13hjBVQg" points="[10, 20, 2, -65]$[10, 65, 2, -20]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_-58xYIA7EeiPAP7P5dBK8g" type="3273" element="_-568MIA7EeiPAP7P5dBK8g" source="_uF0y8G4eEei2ep13hjBVQg" target="_60zg8IA7EeiPAP7P5dBK8g">
+      <styles xmi:type="notation:FontStyle" xmi:id="_-58xYYA7EeiPAP7P5dBK8g" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-58xYoA7EeiPAP7P5dBK8g" points="[60, 20, -137, -42]$[134, 60, -63, -2]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="__RjZEIA7EeiPAP7P5dBK8g" type="3106" element="__Rg80IA7EeiPAP7P5dBK8g" source="_60zg8IA7EeiPAP7P5dBK8g" target="_gs4mcG4fEei2ep13hjBVQg">
+      <styles xmi:type="notation:FontStyle" xmi:id="__RjZEYA7EeiPAP7P5dBK8g" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__RjZEoA7EeiPAP7P5dBK8g" points="[-63, 10, 139, -28]$[-207, 18, -5, -20]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

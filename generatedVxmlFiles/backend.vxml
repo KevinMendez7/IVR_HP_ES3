@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml application="globalContext.vxml" version="2.1" xmlns="http://www.w3.org/2001/vxml" xmlns:gmap="http://www.example.org/gmap" xmlns:java="com.hp.ocstudio.gmap.diagram.codegeneration.XSLSupportFunctions" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd">
+    <var expr="" name="responseWS"/>
+    <var expr="" name="tmp"/>
+    <form id="Log_3">
+        <block>
+            <log label="backend">backend                         : <value expr="[subscriber.hola, subscriber.state.current]"/></log>
+            <assign expr="getBackendParameters(subscriber)" name="tmp"/>
+            <log label="backend">backend                        : <value expr="[&quot;subscriber.state.current&quot;,subscriber.state.current]"/></log>
+            <data name="WS_request" srcexpr="WSIVRCAM_WSDIVRCAMService(subscriber.backend.methodName,subscriber.backend.parameterName,subscriber.backend.valueName,null,null,false)"/>
+            <assign expr="WS_request" name="responseWS"/>
+            <log label="backend">backend                        : <value expr="[&quot;subscriber.state.current&quot;,subscriber.state.current.name]"/></log>
+            <assign expr="handleBackendResponse(subscriber, responseWS)" name="tmp"/>
+            <if cond="subscriber.state.hasOwnProperty(&quot;current&quot;)">
+                <if cond="subscriber.state.current.name==&quot;external&quot;">
+                    <log label="balance">balance                   : <value expr="[subscriber.external.balance, subscriber.external.statePlan]"/></log>
+                    <goto next="#Log_1"/>
+                    <else/>
+                    <goto next="#Log_1"/>
+                </if>
+                <else/>
+                <goto next="#Log_1"/>
+            </if>
+        </block>
+    </form>
+    <catch count="1" event="error.semantic">
+        <log label="error">error                     : <value expr="[&quot;hola&quot;]"/></log>
+    </catch>
+    <form id="Log_1">
+        <block>
+            <log label="backend">backend                        : <value expr="[subscriber.local.segment]"/></log>
+            <goto expr="handleState(subscriber)"/>
+        </block>
+    </form>
+</vxml>

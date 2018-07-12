@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmap="http://www.example.org/gmap" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <gmap:VxmlType xmi:id="_sshtEPsEEeewfeeEsfsStg" version="1.13">
+    <globalEventHandler xmi:type="gmap:GlobalEventHandlerType" xmi:id="_sslXcPsEEeewfeeEsfsStg"/>
+    <variable xmi:type="gmap:VariableType" xmi:id="_ssl-gPsEEeewfeeEsfsStg">
+      <var xmi:type="gmap:VarType" xmi:id="_PY5XkHnPEeigWvn62bmWIg" name="subscriber" value=""/>
+    </variable>
+    <script xmi:type="gmap:ScriptType" xmi:id="_pYOOQPsFEeewfeeEsfsStg" connetorType="Script URL" id="start" isData="false" label="start" source="../ECMAScripts/start.es"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_CWvnwHbNEeiAovEqZuZHMQ" connetorType="Script URL" id="test" isData="false" label="test" source="../ECMAScripts/test.es"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_D39XUHbXEeiAovEqZuZHMQ" connetorType="Script URL" id="prepago_config" isData="false" label="prepago_config" source="../ECMAScripts/segments/prepago.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_tjuUcHd_EeirUc-E7TMORQ" connetorType="Script URL" id="pospago" isData="false" label="pospago" source="../ECMAScripts/segments/pospago.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_gAoaYHkVEeiq28rrPlCUuQ" connetorType="Script URL" id="init_config" isData="false" label="init_config" source="../ECMAScripts/segments/init.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_n06PAHkVEeiq28rrPlCUuQ" connetorType="Script URL" id="ivr_config" isData="false" label="ivr_config" source="../ECMAScripts/core/ivr.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_JluXUHmIEeigWvn62bmWIg" connetorType="Script URL" id="init" isData="false" label="init" source="../ECMAScripts/core/init.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_g9B08HmIEeigWvn62bmWIg" connetorType="Script URL" id="ivr_state" isData="false" label="ivr_state" source="../ECMAScripts/core/ivr_state.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_LjunYHnQEeigWvn62bmWIg" connetorType="Script URL" id="template" isData="false" label="template" source="../ECMAScripts/flowProperties/template.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_e-IA8HqIEeiPCYs6m6fsFA" connetorType="Script URL" id="WS_AVI" isData="false" label="WS_AVI" source="../ECMAScripts/WSDIVRCAMService.es"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_D9ddsHqNEeiPCYs6m6fsFA" connetorType="Script URL" id="backend_config" isData="false" label="backend_config" source="../ECMAScripts/flowProperties/backend.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_jM5WkHrMEeiPCYs6m6fsFA" connetorType="Script URL" id="input_config" isData="false" label="input_config" source="../ECMAScripts/flowProperties/input.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_guYtoHxJEei_l7q5iw96KQ" connetorType="Script URL" id="utilities" isData="false" label="utilities" source="../ECMAScripts/core/utilities.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_IGjIEH0AEei4GdGTK4VRxQ" connetorType="Script URL" id="plan_libre" isData="false" label="plan_libre" source="../ECMAScripts/segments/plan_libre.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_HluGYH0VEei4GdGTK4VRxQ" connetorType="Script URL" id="hibrido" isData="false" label="hibrido" source="../ECMAScripts/segments/hibrido.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_eEVDMH2eEeiHaOFppPlCGg" connetorType="Script URL" id="audio_config" isData="false" label="audio_config" source="../ECMAScripts/flowProperties/audio.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_ZrgqkH4nEeiHaOFppPlCGg" connetorType="Script URL" id="state_plan_config" isData="false" label="state_plan_config" source="../ECMAScripts/core/state_plan.config.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_cK4U0IA8EeiPAP7P5dBK8g" connetorType="Script URL" id="merge_config" isData="false" label="merge_config" source="../ECMAScripts/flowProperties/merge.config.js"/>
+  </gmap:VxmlType>
+  <notation:Diagram xmi:id="_ssl-gfsEEeewfeeEsfsStg" type="Gmap" element="_sshtEPsEEeewfeeEsfsStg" name="globalContext.mmdiag" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_ssl-gvsEEeewfeeEsfsStg" type="1015" element="_sslXcPsEEeewfeeEsfsStg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssl-g_sEEeewfeeEsfsStg" x="150" y="-85"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_ssl-hPsEEeewfeeEsfsStg" type="1001" element="_ssl-gPsEEeewfeeEsfsStg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssl-hfsEEeewfeeEsfsStg" y="-80"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_pYU78PsFEeewfeeEsfsStg" type="1010" element="_pYOOQPsFEeewfeeEsfsStg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pYU78fsFEeewfeeEsfsStg" x="155" y="405"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_CW28gHbNEeiAovEqZuZHMQ" type="1010" element="_CWvnwHbNEeiAovEqZuZHMQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CW28gXbNEeiAovEqZuZHMQ" x="157" y="458"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_D3-lcHbXEeiAovEqZuZHMQ" type="1010" element="_D39XUHbXEeiAovEqZuZHMQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_D3-lcXbXEeiAovEqZuZHMQ" x="155" y="140"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_tjwJoHd_EeirUc-E7TMORQ" type="1010" element="_tjuUcHd_EeirUc-E7TMORQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tjwJoXd_EeirUc-E7TMORQ" x="155" y="90"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_gD7mAHkVEeiq28rrPlCUuQ" type="1010" element="_gAoaYHkVEeiq28rrPlCUuQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gD7mAXkVEeiq28rrPlCUuQ" x="155" y="35"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_n07dIHkVEeiq28rrPlCUuQ" type="1010" element="_n06PAHkVEeiq28rrPlCUuQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n07dIXkVEeiq28rrPlCUuQ" x="490" y="420"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_Jl9n4HmIEeigWvn62bmWIg" type="1010" element="_JluXUHmIEeigWvn62bmWIg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jl9n4XmIEeigWvn62bmWIg" x="490" y="300"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_g9DqIHmIEeigWvn62bmWIg" type="1010" element="_g9B08HmIEeigWvn62bmWIg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g9DqIXmIEeigWvn62bmWIg" x="490" y="360"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_wc5kAHnPEeigWvn62bmWIg" type="Note" fontName="Segoe UI" description="CORE elements" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_wc5kBHnPEeigWvn62bmWIg" type="DiagramName">
+        <element xsi:nil="true"/>
+      </children>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_wc5kBXnPEeigWvn62bmWIg" type="Description">
+        <element xsi:nil="true"/>
+      </children>
+      <styles xmi:type="notation:TextStyle" xmi:id="_wc5kAXnPEeigWvn62bmWIg"/>
+      <styles xmi:type="notation:LineTypeStyle" xmi:id="_wc5kAnnPEeigWvn62bmWIg"/>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wc5kA3nPEeigWvn62bmWIg" x="495" y="225"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_25M5EXnPEeigWvn62bmWIg" type="Note" fontName="Segoe UI" description="Others" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_25M5EnnPEeigWvn62bmWIg" type="DiagramName">
+        <element xsi:nil="true"/>
+      </children>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_25M5E3nPEeigWvn62bmWIg" type="Description">
+        <element xsi:nil="true"/>
+      </children>
+      <styles xmi:type="notation:TextStyle" xmi:id="_25M5FHnPEeigWvn62bmWIg"/>
+      <styles xmi:type="notation:LineTypeStyle" xmi:id="_25M5FXnPEeigWvn62bmWIg"/>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_25M5FnnPEeigWvn62bmWIg" x="160" y="330"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_7T6J0XnPEeigWvn62bmWIg" type="Note" fontName="Segoe UI" description="Segments" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_7T6J0nnPEeigWvn62bmWIg" type="DiagramName">
+        <element xsi:nil="true"/>
+      </children>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_7T6J03nPEeigWvn62bmWIg" type="Description">
+        <element xsi:nil="true"/>
+      </children>
+      <styles xmi:type="notation:TextStyle" xmi:id="_7T6J1HnPEeigWvn62bmWIg"/>
+      <styles xmi:type="notation:LineTypeStyle" xmi:id="_7T6J1XnPEeigWvn62bmWIg"/>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7T6J1nnPEeigWvn62bmWIg" x="170" y="-35"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_IhgMgXnQEeigWvn62bmWIg" type="Note" fontName="Segoe UI" description="Flow Properties" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_IhgMgnnQEeigWvn62bmWIg" type="DiagramName">
+        <element xsi:nil="true"/>
+      </children>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_IhgMg3nQEeigWvn62bmWIg" type="Description">
+        <element xsi:nil="true"/>
+      </children>
+      <styles xmi:type="notation:TextStyle" xmi:id="_IhgMhHnQEeigWvn62bmWIg"/>
+      <styles xmi:type="notation:LineTypeStyle" xmi:id="_IhgMhXnQEeigWvn62bmWIg"/>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IhgMhnnQEeigWvn62bmWIg" x="320" y="-35"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_Lj3xUHnQEeigWvn62bmWIg" type="1010" element="_LjunYHnQEeigWvn62bmWIg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Lj3xUXnQEeigWvn62bmWIg" x="305" y="35"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_dhOlIHqIEeiPCYs6m6fsFA" type="Note" fontName="Segoe UI" description="Backend" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_dhPMMHqIEeiPCYs6m6fsFA" type="DiagramName">
+        <element xsi:nil="true"/>
+      </children>
+      <children xmi:type="notation:BasicDecorationNode" xmi:id="_dhPMMXqIEeiPCYs6m6fsFA" type="Description">
+        <element xsi:nil="true"/>
+      </children>
+      <styles xmi:type="notation:TextStyle" xmi:id="_dhPMMnqIEeiPCYs6m6fsFA"/>
+      <styles xmi:type="notation:LineTypeStyle" xmi:id="_dhPMM3qIEeiPCYs6m6fsFA"/>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dhPMNHqIEeiPCYs6m6fsFA" x="475" y="-35"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_e-KdMHqIEeiPCYs6m6fsFA" type="1010" element="_e-IA8HqIEeiPCYs6m6fsFA" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e-KdMXqIEeiPCYs6m6fsFA" x="460" y="35"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_D9i9QHqNEeiPCYs6m6fsFA" type="1010" element="_D9ddsHqNEeiPCYs6m6fsFA" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_D9i9QXqNEeiPCYs6m6fsFA" x="305" y="90"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_jM-PEHrMEeiPCYs6m6fsFA" type="1010" element="_jM5WkHrMEeiPCYs6m6fsFA" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jM-PEXrMEeiPCYs6m6fsFA" x="305" y="140"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_gueNMHxJEei_l7q5iw96KQ" type="1010" element="_guYtoHxJEei_l7q5iw96KQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gueNMXxJEei_l7q5iw96KQ" x="490" y="485"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_IGk9QH0AEei4GdGTK4VRxQ" type="1010" element="_IGjIEH0AEei4GdGTK4VRxQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IGk9QX0AEei4GdGTK4VRxQ" x="154" y="199"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_HlvUgH0VEei4GdGTK4VRxQ" type="1010" element="_HluGYH0VEei4GdGTK4VRxQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HlvUgX0VEei4GdGTK4VRxQ" x="155" y="265"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_eEbJ0H2eEeiHaOFppPlCGg" type="1010" element="_eEVDMH2eEeiHaOFppPlCGg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eEbJ0X2eEeiHaOFppPlCGg" x="305" y="200"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_ZrmKIH4nEeiHaOFppPlCGg" type="1010" element="_ZrgqkH4nEeiHaOFppPlCGg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZrmKIX4nEeiHaOFppPlCGg" x="489" y="550"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_cK6KAIA8EeiPAP7P5dBK8g" type="1010" element="_cK4U0IA8EeiPAP7P5dBK8g" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cK6KAYA8EeiPAP7P5dBK8g" x="305" y="265"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_ssl-hvsEEeewfeeEsfsStg"/>
+  </notation:Diagram>
+</xmi:XMI>

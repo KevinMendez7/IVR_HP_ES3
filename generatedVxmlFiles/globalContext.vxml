@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1" xmlns="http://www.w3.org/2001/vxml" xmlns:gmap="http://www.example.org/gmap" xmlns:java="com.hp.ocstudio.gmap.diagram.codegeneration.XSLSupportFunctions" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd">
+    <var expr="new Object()" name="WSDIVRCAMService"/>
+    <script>
+        WSDIVRCAMService.service='WSDIVRCAMService';
+        WSDIVRCAMService.application='TestIVRPanama';
+        WSDIVRCAMService.AS_URL='/SOAPConnector/SOAPConnector/';
+    </script>
+    <script src="../ECMAScripts/WSDIVRCAMService.es"/>
+    <property name="com.hp.secure_context" value="true"/>
+    <script src="../ECMAScripts/start.es"/>
+    <script src="../ECMAScripts/test.es"/>
+    <script src="../ECMAScripts/segments/prepago.config.js"/>
+    <script src="../ECMAScripts/segments/pospago.config.js"/>
+    <script src="../ECMAScripts/segments/init.config.js"/>
+    <script src="../ECMAScripts/core/ivr.config.js"/>
+    <script src="../ECMAScripts/core/init.js"/>
+    <script src="../ECMAScripts/core/ivr_state.config.js"/>
+    <script src="../ECMAScripts/flowProperties/template.js"/>
+    <script src="../ECMAScripts/WSDIVRCAMService.es"/>
+    <script src="../ECMAScripts/flowProperties/backend.config.js"/>
+    <script src="../ECMAScripts/flowProperties/input.config.js"/>
+    <script src="../ECMAScripts/core/utilities.js"/>
+    <script src="../ECMAScripts/segments/plan_libre.config.js"/>
+    <script src="../ECMAScripts/segments/hibrido.config.js"/>
+    <script src="../ECMAScripts/flowProperties/audio.config.js"/>
+    <script src="../ECMAScripts/core/state_plan.config.js"/>
+    <script src="../ECMAScripts/flowProperties/merge.config.js"/>
+    <var expr="" name="subscriber"/>
+    <form id="global_Context_1">
+        <block>
+            <goto next="start.vxml"/>
+        </block>
+    </form>
+</vxml>

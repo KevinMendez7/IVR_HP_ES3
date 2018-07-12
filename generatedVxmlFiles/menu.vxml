@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml application="globalContext.vxml" version="2.1" xmlns="http://www.w3.org/2001/vxml" xmlns:gmap="http://www.example.org/gmap" xmlns:java="com.hp.ocstudio.gmap.diagram.codegeneration.XSLSupportFunctions" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd">
+    <var expr="" name="option"/>
+    <var expr="" name="reuse"/>
+    <form id="menu">
+        <field name="menu">
+            <grammar mode="dtmf" src="../grammarFiles/input.grxml"/>
+            <prompt>
+                <audio expr="getPath(getAudio(subscriber), subscriber)"/>
+            </prompt>
+            <filled>
+                <assign expr="menu" name="option"/>
+                <log label="menu">menu                         : <value expr="[option, subscriber.state.current.name, subscriber.flowChart.name]"/></log>
+                <assign expr="getStateByDigit(option, subscriber)" name="subscriber"/>
+                <log label="Log">Log                  : <value expr="[subscriber.state.next[0].name, subscriber.state.next[0].callflow, subscriber.test]"/></log>
+                <goto expr="handleState(subscriber)"/>
+            </filled>
+        </field>
+    </form>
+    <catch count="1" event="error.semantic">
+        <log label="excepcionmenu">excepcionmenu                          : <value expr="[subscriber.state]"/></log>
+    </catch>
+</vxml>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml application="globalContext.vxml" version="2.1" xmlns="http://www.w3.org/2001/vxml" xmlns:gmap="http://www.example.org/gmap" xmlns:java="com.hp.ocstudio.gmap.diagram.codegeneration.XSLSupportFunctions" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd">
+    <var expr="" name="audioArray"/>
+    <var expr="" name="nextAudio"/>
+    <form id="Log_1">
+        <block>
+            <log label="balance">balance                          :   <value expr="[subscriber.state.current.name, subscriber.state.next[0].name]"/></log>
+            <assign expr="mergeAudioInfo(subscriber)" name="audioArray"/>
+            <log label="balanceArray">balanceArray                   : <value expr="audioArray"/></log>
+            <goto next="#updateArray"/>
+        </block>
+    </form>
+    <form id="hasMoreData">
+        <block>
+            <if cond="audioArray.length&gt;0">
+                <goto next="#updateArray"/>
+                <else/>
+                <goto next="#ExternalGoto_1"/>
+            </if>
+        </block>
+    </form>
+    <form id="updateArray">
+        <block>
+            <assign expr="audioArray.shift()" name="nextAudio"/>
+            <if cond="typeof nextAudio===&apos;string&apos; &amp;&amp; nextAudio.replace(&apos; &apos;,&apos;&apos;) != &apos;&apos;">
+                <prompt>
+                    <audio expr="getPath(nextAudio, subscriber)"/>
+                </prompt>
+                <goto next="#hasMoreData"/>
+                <elseif cond="typeof nextAudio===&quot;number&quot;"/>
+                <script srcexpr="&quot;http://localhost:8090/VoiceBase/jspFiles/voiceBase.jsp?lang=&quot;+('spanish')+&quot;&amp;speaker=&quot;+('default')+&quot;&amp;gender=&quot;+('female')+&quot;&amp;type=currency&amp;format=(c)(sn)&amp;mode=ecmascript&amp;arg=&quot;+(nextAudio)"/>
+                <foreach array="prompts" item="aPrompt">
+                    <audio expr="aPrompt"/>
+                </foreach>
+                <goto next="#hasMoreData"/>
+                <elseif cond="typeof nextAudio===&quot;object&quot;"/>
+                <script srcexpr="&quot;http://localhost:8090/VoiceBase/jspFiles/voiceBase.jsp?lang=&quot;+('spanish')+&quot;&amp;speaker=&quot;+('default')+&quot;&amp;gender=&quot;+('female')+&quot;&amp;type=date&amp;format=dmcy&amp;mode=ecmascript&amp;arg=&quot;+(nextAudio.getFullYear()+'-'+nextAudio.getMonth()+'-'+nextAudio.getDate())"/>
+                <foreach array="prompts" item="aPrompt">
+                    <audio expr="aPrompt"/>
+                </foreach>
+                <goto next="#hasMoreData"/>
+                <else/>
+                <goto next="#hasMoreData"/>
+            </if>
+        </block>
+    </form>
+    <form id="ExternalGoto_1">
+        <block>
+            <goto expr="handleState(subscriber)"/>
+        </block>
+    </form>
+</vxml>

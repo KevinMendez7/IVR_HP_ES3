@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><root version="1.2"><prompt format="dmcy" gender="'female'" isOnTime="true" language="'spanish'" name="Local VB" playAs="Ecma" speaker="'default'" tabulation="standard" type="VoiceBase" vbname="Local VB" vbtype="date"><var name="nextAudio.getFullYear()+'-'+nextAudio.getMonth()+'-'+nextAudio.getDate()"/></prompt></root>
